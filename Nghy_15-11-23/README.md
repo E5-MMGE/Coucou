@@ -1,10 +1,16 @@
-<br/>
+
+<br>
+
 <p align="center">
   <h2 align="center">Attaque par .cmd - Nghy 15/11/23</h2>
 
   <p align="center">
-    <br/>
-    <br/>
+    
+<br>
+
+    
+<br>
+
   </p>
 </p>
 
@@ -63,47 +69,89 @@ Pour utiliser ce projet, suivez les étapes suivantes :
 0. Téléchargez le dossier [Nghy_15-11-23](/Nghy_15-11-23) et placez le dans la clé USB
 1. Changez le "Propriétaire" du fichier "Esc.cmd" et "Launch.cmd" en "System"
 Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'application "non sécurisée"
-<br/>
+
+<br>
+
 1.a Allez dans les propriétés du fichier "Esc.cmd" et "Launch.cmd"
-<br/>
+
+<br>
+
 ![Propriétés](/Img/Nghy_15-11-23_1.png?raw=true "Propriétés")
-<br/>
+
+<br>
+
 1.b Allez dans l'onglet "Sécurité"
-<br/>
+
+<br>
+
 ![Sécurité](/Img/Nghy_15-11-23_2.png?raw=true "Sécurité")
-<br/>
+
+<br>
+
 1.c Cliquez sur "Avancé"
-<br/>
+
+<br>
+
 ![Avancé](/Img/Nghy_15-11-23_3.png?raw=true "Avancé")
-<br/>
+
+<br>
+
 1.d Cliquez sur "Modifier"
-<br/>
+
+<br>
+
 ![Modifier](/Img/Nghy_15-11-23_4.png?raw=true "Modifier")
-<br/>
+
+<br>
+
 1.e Cliquez sur "Avancé"
-<br/>
+
+<br>
+
 ![Avancé](/Img/Nghy_15-11-23_5.png?raw=true "Avancé...")
-<br/>
+
+<br>
+
 1.f Cliquez sur "Rechercher"
-<br/>
+
+<br>
+
 ![Rechercher](/Img/Nghy_15-11-23_6.png?raw=true "Rechercher")
-<br/>
+
+<br>
+
 1.g Choisissez "SYSTEM" et cliquez sur "OK"
-<br/>
+
+<br>
+
 ![SYSTEM](/Img/Nghy_15-11-23_7.png?raw=true "SYSTEM")
-<br/>
+
+<br>
+
 1.h Cliquez sur "OK"
-<br/>
+
+<br>
+
 ![OK](/Img/Nghy_15-11-23_8.png?raw=true "OK")
-<br/>
+
+<br>
+
 1.i Cliquez sur "Appliquer"
-<br/>
+
+<br>
+
 ![Appliquer](/Img/Nghy_15-11-23_9.png?raw=true "Appliquer")
-<br/>
+
+<br>
+
 1.j Cliquez sur "OK"
-<br/>
+
+<br>
+
 ![OK](/Img/Nghy_15-11-23_10.png?raw=true "OK")
-<br/>
+
+<br>
+
 
 2. Modifiez le programme "Launch.cmd" pour pointer vers un programme de votre choix
 2.a Mettez un programe de votre choix dans la clé USB qui pourrait necessiter des droits d'administrateur
