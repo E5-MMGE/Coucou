@@ -69,7 +69,7 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 
 <br>
 
-![Propriétés](/Img/Nghy_15-11-23_1.png?raw=true "Propriétés")
+![Propriétés](/Img/Nghy_15-11-23/Nghy_15-11-23_1.png?raw=true "Propriétés")
 
 <br>
 
@@ -77,7 +77,7 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 
 <br>
 
-![Sécurité](/Img/Nghy_15-11-23_2.png?raw=true "Sécurité")
+![Sécurité](/Img/Nghy_15-11-23/Nghy_15-11-23_2.png?raw=true "Sécurité")
 
 <br>
 
@@ -85,7 +85,7 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 
 <br>
 
-![Avancé](/Img/Nghy_15-11-23_3.png?raw=true "Avancé")
+![Avancé](/Img/Nghy_15-11-23/Nghy_15-11-23_3.png?raw=true "Avancé")
 
 <br>
 
@@ -93,7 +93,7 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 
 <br>
 
-![Modifier](/Img/Nghy_15-11-23_4.png?raw=true "Modifier")
+![Modifier](/Img/Nghy_15-11-23/Nghy_15-11-23_4.png?raw=true "Modifier")
 
 <br>
 
@@ -101,7 +101,7 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 
 <br>
 
-![Avancé](/Img/Nghy_15-11-23_5.png?raw=true "Avancé...")
+![Avancé](/Img/Nghy_15-11-23/Nghy_15-11-23_5.png?raw=true "Avancé...")
 
 <br>
 
@@ -109,7 +109,7 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 
 <br>
 
-![Rechercher](/Img/Nghy_15-11-23_6.png?raw=true "Rechercher")
+![Rechercher](/Img/Nghy_15-11-23/Nghy_15-11-23_6.png?raw=true "Rechercher")
 
 <br>
 
@@ -117,7 +117,7 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 
 <br>
 
-![SYSTEM](/Img/Nghy_15-11-23_7.png?raw=true "SYSTEM")
+![SYSTEM](/Img/Nghy_15-11-23/Nghy_15-11-23_7.png?raw=true "SYSTEM")
 
 <br>
 
@@ -125,7 +125,7 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 
 <br>
 
-![OK](/Img/Nghy_15-11-23_8.png?raw=true "OK")
+![OK](/Img/Nghy_15-11-23/Nghy_15-11-23_8.png?raw=true "OK")
 
 <br>
 
@@ -133,7 +133,7 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 
 <br>
 
-![Appliquer](/Img/Nghy_15-11-23_9.png?raw=true "Appliquer")
+![Appliquer](/Img/Nghy_15-11-23/Nghy_15-11-23_9.png?raw=true "Appliquer")
 
 <br>
 
@@ -141,7 +141,7 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 
 <br>
 
-![OK](/Img/Nghy_15-11-23_10.png?raw=true "OK")
+![OK](/Img/Nghy_15-11-23/Nghy_15-11-23_10.png?raw=true "OK")
 
 <br>
 
