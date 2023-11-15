@@ -22,6 +22,8 @@
 
 ## A Propos
 
+_Projet financé avec un pauvre flan au café (me demandez pas c'est la boulangerie du coin mdr)_
+
 Ce projet est un projet de test de sécurité et de fiabilité de vos amis.
 Le fonctionnement est le suivant :
 Il y a trois fichiers :
