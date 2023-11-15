@@ -1,20 +1,13 @@
-
 <br>
-
 <p align="center">
   <h2 align="center">Attaque par .cmd - Nghy 15/11/23</h2>
-
   <p align="center">
-    
-<br>
-
-    
-<br>
-
+    <br>
+    <br>
   </p>
 </p>
 
-/!\ **Ce projet est pour but de tester la sécurité et la fiabilité de vos amis. Ce projet ne doit en aucun cas être utilisé pour nuire à autrui et n'est pas à utiliser sans consentement.** /!\
+/!\ **Ce projet a pour but de tester la sécurité et la fiabilité de vos amis. Ce projet ne doit en aucun cas être utilisé pour nuire à autrui et n'est pas à utiliser sans consentement.** /!\
 
 ## Sommaire
 
