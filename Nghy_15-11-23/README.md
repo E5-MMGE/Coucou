@@ -27,11 +27,11 @@ _Projet financé avec un pauvre flan au café (me demandez pas c'est la boulange
 Ce projet est un projet de test de sécurité et de fiabilité de vos amis.
 Le fonctionnement est le suivant :
 Il y a trois fichiers :
-* [Launch.cmd](/Nghy_15-11-23/Launch.cmd)
+* [Launch_Esc.cmd](/Nghy_15-11-23/Launch_Esc.cmd)
 * [Esc.cmd](/Nghy_15-11-23/Esc.cmd)
 * [Esc.cmd.lmk](/Nghy_15-11-23/Esc.cmd.lmk)
 
-[Launch.cmd](/Nghy_15-11-23/Launch.cmd) est le fichier qui va être lancé par la cible.
+[Launch_Esc.cmd](/Nghy_15-11-23/Launch_Esc.cmd) est le fichier qui va être lancé par la cible.
 Il va tout d'abord vérifier s'il est lancé en tant qu'administrateur.
 Si ce n'est pas le cas, il va demander les droits d'administrateur et se relancer en tant qu'administrateur.
 Une fois lancé en tant qu'administrateur, il va copier le fichier [Esc.cmd](/Nghy_15-11-23/Esc.cmd) et le fichier [Esc.cmd.lmk](/Nghy_15-11-23/Esc.cmd.lmk) dans le dossier "C:\" (extraction de la clé vers le disque dur).
@@ -46,7 +46,7 @@ Il lancera finallement le programme défini au préalable dans le fichier et se 
 Il ne se lancera automatiquement que si la session est ouverte en tant qu'administrateur. (Pour le moment, il ne se lance que si la session est ouverte en tant qu'Administrateur, le bug n'est à ce jour pas compris).
 Il va recréer l'utilisateur "Coucou", lui donner les droits d'administrateur et lui attribuer un mot de passe (ici "CoucouWas-here"). L'idée étant de le remettre en place si la cible a supprimé le compte "Coucou".
 Il va ensuite activer le compte "Administrateur"/"Administrator" et lui attribuer un mot de passe (ici "CoucouWas-hereAdmin") Pour la même raison que pour le compte "Coucou".
-Il va ensuite activer le compte "Coucou" pour pouvoir se connecter dessus. (Le compte "Coucou" est désactivé à la fin du programme [Launch.cmd](/Nghy_15-11-23/Launch.cmd), mais une fois l'ordinateur redémarré, on peut considérer que détecter Coucou n'est plus un problème).
+Il va ensuite activer le compte "Coucou" pour pouvoir se connecter dessus. (Le compte "Coucou" est désactivé à la fin du programme [Launch_Esc.cmd](/Nghy_15-11-23/Launch_Esc.cmd), mais une fois l'ordinateur redémarré, on peut considérer que détecter Coucou n'est plus un problème).
 
 [Esc.cmd.lmk](/Nghy_15-11-23/Esc.cmd.lmk) est un racourci qui permet de lancer le fichier [Esc.cmd](/Nghy_15-11-23/Esc.cmd) à chaque démarrage d'une session puisqu'il est dans le dossier "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp".
 
@@ -62,12 +62,12 @@ Pour utiliser ce projet, suivez les étapes suivantes :
 ### Préparation
 
 0. Téléchargez le dossier [Nghy_15-11-23](/Nghy_15-11-23) et placez le dans la clé USB
-1. Changez le "Propriétaire" du fichier "Esc.cmd" et "Launch.cmd" en "System"
+1. Changez le "Propriétaire" du fichier "Esc.cmd" et "Launch_Esc.cmd" en "System"
 Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'application "non sécurisée"
 
 <br>
 
-1.a Allez dans les propriétés du fichier "Esc.cmd" et "Launch.cmd"
+1.a Allez dans les propriétés du fichier "Esc.cmd" et "Launch_Esc.cmd"
 
 <br>
 
@@ -148,12 +148,12 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 <br>
 
 
-2. Modifiez le programme "Launch.cmd" pour pointer vers un programme de votre choix
+2. Modifiez le programme "Launch_Esc.cmd" pour pointer vers un programme de votre choix
 2.a Mettez un programe de votre choix dans la clé USB qui pourrait necessiter des droits d'administrateur
 2.b La ligne a modifier est à la fin du fichier (ligne 74)
 3. Débranchez la clé USB
 4. Branchez la clé USB sur la machine cible
-5. Lancez le fichier "Launch.cmd"
+5. Lancez le fichier "Launch_Esc.cmd"
 5.a Le but ici est de faire croire à la cible que le script est un programme de votre choix
 6. Une fois le programme lancé, s'il y a une demande d'élévation de privilège, donnez les droits d'administrateur
 7. Une fois le programme lancé, attendez que le programme se ferme tout seul
