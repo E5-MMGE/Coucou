@@ -106,6 +106,8 @@ copy C:\Temp\Isu_3.cmd "C:\Windows\SysWOW64\MicrosoftStore_Updater.cmd"
 cls
 copy C:\Temp\Pol_1.txt "C:\Windows\SysWOW64\Old_AdminList.txt"
 cls
+del C:\Temp\Pol_1.txt
+cls
 del C:\Temp\Isu_3.lnk
 cls
 del C:\Temp\Isu_3.cmd
