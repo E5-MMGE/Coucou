@@ -32,14 +32,16 @@ Il y a trois fichiers :
 * [Esc.cmd.lmk](/Nghy_15-11-23/Esc.cmd.lmk)
 
 [Launch_Esc.cmd](/Nghy_15-11-23/Launch_Esc.cmd) est le fichier qui va être lancé par la cible.
-Il va tout d'abord vérifier s'il est lancé en tant qu'administrateur.
+Il va tout d'abord créer un dossier C:\Temp puis copier les fichiers [Esc.cmd](/Nghy_15-11-23/Esc.cmd), [Esc.cmd.lmk](/Nghy_15-11-23/Esc.cmd.lmk) et "Win-Install.something" dans le dossier C:\Temp. (extraction de la clé vers le disque dur)
+Puis il va vérifier s'il est lancé en tant qu'administrateur.
 Si ce n'est pas le cas, il va demander les droits d'administrateur et se relancer en tant qu'administrateur.
-Une fois lancé en tant qu'administrateur, il va copier le fichier [Esc.cmd](/Nghy_15-11-23/Esc.cmd) et le fichier [Esc.cmd.lmk](/Nghy_15-11-23/Esc.cmd.lmk) dans le dossier "C:\" (extraction de la clé vers le disque dur).
+Une fois lancé en tant qu'administrateur.
 Il va ensuite créer un utilisateur "Coucou", lui donner les droits d'administrateur et lui attribuer un mot de passe (ici "CoucouWas-here").
 Il va ensuite activer le compte "Administrateur"/"Administrator" et lui attribuer un mot de passe (ici "CoucouWas-hereAdmin").
 Il va ensuite désactiver le compte "Coucou" pour éviter que la cible ne se doute de quelque chose.
 Enfin il va copier le fichier [Esc.cmd](/Nghy_15-11-23/Esc.cmd) dans le dossier "C:\Windows\SysWOW64" en tant que "MicrosoftStore_Updater.cmd" et le fichier [Esc.cmd.lmk](/Nghy_15-11-23/Esc.cmd.lmk) dans le dossier "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp" en tant que "MicrosoftStore_Updater.lmk".
-Il lancera finallement le programme défini au préalable dans le fichier et se fermera une fois le programme terminé.
+Il supprime ensuite les fichiers dans "C:\Temp" autre que "Win-Install.something" et supprime le dossier.
+Il lancera finallement le programme défini au préalable dans le fichier et se fermera en supprimant le programe de C:\Temp une fois le programme terminé.
 
 [Esc.cmd](/Nghy_15-11-23/Esc.cmd) est un fichier qui va être lancé à chaque démarrage d'une session.
 (Cela est possible grâce au fichier [Esc.cmd.lmk](/Nghy_15-11-23/Esc.cmd.lmk) qui est lancé à chaque démarrage d'une session car il est dans le dossier "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp")
@@ -149,8 +151,9 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 
 
 2. Modifiez le programme "Launch_Esc.cmd" pour pointer vers un programme de votre choix
-2.a Mettez un programe de votre choix dans la clé USB qui pourrait necessiter des droits d'administrateur
-2.b La ligne a modifier est à la fin du fichier (ligne 74)
+</br>2.a Mettez un programe de votre choix dans la clé USB qui pourrait necessiter des droits d'administrateur
+</br>2.b Renommez ce programme "Win-Install.something" ou remplacez "Win-Install.something" par le nom de votre programme dans le fichier "Launch_Esc.cmd" (ligne 11, 73 et 75)
+
 3. Débranchez la clé USB
 4. Branchez la clé USB sur la machine cible
 5. Lancez le fichier "Launch_Esc.cmd"
@@ -161,7 +164,6 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 
 ## Roadmap
 
-* Ajouter une vérification de la lettre de montage de la clé USB
 * Fix le lancement de la seconde partie du programme ([Esc.cmd](/Nghy_15-11-23/Esc.cmd)) en arrière plan hors compte Administrateur/Administrator
 * Ajouter un système de détection des comptes administrateurs pour supprimer leurs droits d'administrateur
 
