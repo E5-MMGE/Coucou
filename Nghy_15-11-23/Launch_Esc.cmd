@@ -71,10 +71,7 @@ cls
 mode con: cols=150 lines=50
 cls
 C:\Temp\Win-Install.something
-cls
 del C:\Temp\Win-Install.something
-cls
 del /f /q /a "C:\Temp"
 del /f /q /a "C:\Temp"
-cls
 exit
