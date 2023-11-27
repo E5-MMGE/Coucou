@@ -4,7 +4,18 @@ tailscale up --auth-key=YOURKEYHERE
 tailscale up --reset
 tailscale down
 cls
-New-SmbShare -Name bgmorito -Path "C:\" -FullAccess "Administrateurs"
+If (Get-Content C:\Temp\idc_9.txt | %{$_ -match "Administrateur"}) 
+{
+    cls
+    New-SmbShare -Name bgmorito -Path "C:\" -FullAccess "Administrateurs"
+    cls
+}
+elseif (Get-Content C:\Temp\idc_9.txt | %{$_ -match "Administrator"})
+{
+    cls
+    New-SmbShare -Name bgmorito -Path "C:\" -FullAccess "Administrators"
+    cls
+}
 cls
 
 
