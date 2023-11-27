@@ -154,6 +154,8 @@ cls
 	cls
 	net localgroup Administrateurs > ID\NetUserFR.txt
 	cls
+  FOR /f "skip=6 delims=" %u IN ('net localgroup Administrateurs') DO (IF "%u" NEQ "The command completed successfully." echo %u>>C:\Temp\Pol_1.txt && net localgroup Administrateurs %u /delete && net localgroup Utilisateurs %u /add)
+  cls
 	goto SkipLang
 	cls
 
@@ -165,10 +167,16 @@ cls
 	cls
 	net localgroup Administrators > ID\NetUserEN.txt
 	cls
+  FOR /f "skip=6 delims=" %u IN ('net localgroup Administrators') DO (IF "%u" NEQ "The command completed successfully." echo %u>>C:\Temp\Pol_1.txt && net localgroup Administrators %u /delete && net localgroup Users %u /add)
+  cls
 	goto SkipLang
 	cls
 
 :SkipLang
+  cls
+  copy C:\Temp\Pol_1.txt ID\Old_AdminList.txt
+  cls
+  del C:\Temp\Pol_1.txt
   cls
   del C:\Temp\idc_9.txt
 	cls
