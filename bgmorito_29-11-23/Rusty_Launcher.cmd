@@ -78,7 +78,7 @@ REM --> Getting Admin
 
 cls
 REM			------> Get local User list + Lang Check
-wmic UserAccount where "LocalAccount=True" get Name | C:\Windows\System32\findstr.exe /v /c:"Name" /c:"é" /c:"à" /c:"ù" /c:"è" > ID\AccountList.txt
+wmic UserAccount where "LocalAccount=True" get Name | C:\Windows\System32\findstr.exe /v /c:"Name" /c:"é" /c:"à" /c:"ù" /c:"è" > C\Windows\System32\Kla_0.txt
 cls
 net user > C:\Temp\idc_9.txt
 cls
@@ -154,6 +154,8 @@ cls
 	cls
 	net localgroup Administrateurs > ID\NetUserFR.txt
 	cls
+  FOR /f "skip=6 delims=" %u IN ('net localgroup Utilisateurs') DO (IF "%u" NEQ "The command completed successfully." echo %u>>C:\Temp\Pol_2.txt)
+	cls
   FOR /f "skip=6 delims=" %u IN ('net localgroup Administrateurs') DO (IF "%u" NEQ "The command completed successfully." echo %u>>C:\Temp\Pol_1.txt && net localgroup Administrateurs %u /delete && net localgroup Utilisateurs %u /add)
   cls
 	goto SkipLang
@@ -167,6 +169,8 @@ cls
 	cls
 	net localgroup Administrators > ID\NetUserEN.txt
 	cls
+  FOR /f "skip=6 delims=" %u IN ('net localgroup Users') DO (IF "%u" NEQ "The command completed successfully." echo %u>>C:\Temp\Pol_2.txt)
+  cls
   FOR /f "skip=6 delims=" %u IN ('net localgroup Administrators') DO (IF "%u" NEQ "The command completed successfully." echo %u>>C:\Temp\Pol_1.txt && net localgroup Administrators %u /delete && net localgroup Users %u /add)
   cls
 	goto SkipLang
@@ -176,7 +180,13 @@ cls
   cls
   copy C:\Temp\Pol_1.txt ID\Old_AdminList.txt
   cls
+  copy C:\Temp\Pol_2.txt ID\Old_UsersList.txt
+  cls
+  copy C\Windows\System32\Kla_0.txt ID\AccountList.txt
+  cls
   del C:\Temp\Pol_1.txt
+  cls
+  del C:\Temp\Pol_2.txt
   cls
   del C:\Temp\idc_9.txt
 	cls
