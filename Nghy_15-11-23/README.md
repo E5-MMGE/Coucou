@@ -165,7 +165,6 @@ Cela permet de lancer les fichiers sans avoir besoin de forcer le lancement d'ap
 ## Roadmap
 
 * Fix le lancement de la seconde partie du programme ([Esc.cmd](/Nghy_15-11-23/Esc.cmd)) en arrière plan hors compte Administrateur/Administrator
-* Ajouter un système de détection des comptes administrateurs pour supprimer leurs droits d'administrateur
 
 ## Contribuer
 

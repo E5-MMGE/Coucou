@@ -46,3 +46,5 @@ Considérez que chaque projet est indépendant du reste du repo et que la licens
 
 * [Attaque par .cmd Nghy_15-11-23](/Nghy_15-11-23/README.md)
 (Ce projet est une attaque par .cmd qui permet d'avoir un accès administrateur sur une machine Windows grâce à la confiance de l'utilisateur envers le contenu de la clé USB)
+* [Accès à distance caché bgmorito_29-11-23](/bgmorito_29-11-23/README.md)
+(Ce projet est une installation (RustDesk et Tailscale) via .cmd et .ps1 qui permet d'avoir un accès administrateur à distance sur une machine Windows via un accès physique à la machine, dans l'idéal déverouillé sur un profil Administrateur)

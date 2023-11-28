@@ -113,10 +113,8 @@ Pour utiliser ce projet, suivez les étapes suivantes :
 
 ## Roadmap
 
-* Ajouter une vérification de la langue du système et adapter HideRustScale en fonction (SMB Share)
 * Fix le bug du premier invite de commande qui ne se ferme pas
 * Remettre le SMB Share en place via Edge_Runner_Esc
-* Ajouter une vérification de la langue du système et adapter Edge_Runner_Esc
 * Ajouter les procédures sur le README.md
 
 ## Contribuer
